@@ -1,0 +1,16 @@
+version: '1.0'
+services:
+  jupyter-lab:
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./tf-droplet:/tf-droplet
+      - /mnt/c/users/phili_000/documents:/tf-droplet/documents
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

@@ -1,0 +1,7 @@
+jupyterlab
+pandas
+matplotlib
+tqdm
+opencv-python
+scikit-image
+pyvips
